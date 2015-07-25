@@ -1,3 +1,9 @@
 body {
     text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+
+p {
+  padding: none;
+  margin: 0;
 }
