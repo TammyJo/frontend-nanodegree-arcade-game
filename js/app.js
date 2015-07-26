@@ -59,16 +59,16 @@ Player.prototype.update = function(dt) {};
 // Detect the keyboard input for the player
 Player.prototype.handleInput = function(e) {
     // If the player is in character form (not a rock)
-    if (player.sprite != 'images/Rock.png') {
+    if (this.sprite != 'images/Rock.png') {
         // control the player's location based on keyboard input
         switch (e) {
             case 'up':
                 // if the character wins
                 if (this.y > 55 && this.y < 145) {
-                    player.won = true;
-                    winner.x = player.x;
+                    this.won = true;
+                    winner.x = this.x;
                     // render a star on top of the player's head upon winning
-                    winner.y = player.y - 135;
+                    winner.y = this.y - 135;
                     winner.render();
                 }
                 // when the player reaches the water
@@ -101,7 +101,7 @@ Player.prototype.handleInput = function(e) {
                 // if the player has not yet reached the top
                 if (this.won === false) {
                     // turn into a rock
-                    player.sprite = 'images/Rock.png';
+                    this.sprite = 'images/Rock.png';
                 }
                 break;
         }
